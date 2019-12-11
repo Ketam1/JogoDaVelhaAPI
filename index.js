@@ -13,7 +13,7 @@ app.post('/game', (req, res) => {
 })
 
 // app.post('/game/*/movement', (req, res) => {
-//   controllers.makeMove(req, res);
+//   makeMove(req, res);
 // })
 
 // Starting server

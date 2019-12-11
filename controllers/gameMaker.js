@@ -1,6 +1,7 @@
 // Importing bussiness logic
 const {choosePlayer} = require('./../services/playerChooser.js');
 const {createId} = require('./../services/idCreator.js');
+const {createNewGameFile} = require('./../services/fileHandler.js');
 
 function createGame(req, res){
 
@@ -15,12 +16,28 @@ function createGame(req, res){
 
   // Creating the object that will be returned;
   const gameData = {
-    'id': gameId,
-    'firstPlayer': firstPlayer
+    game: {
+      gameId: gameId,
+      firstPlayer: firstPlayer,
+      gameState: 'Ongoing',
+    }
   }
 
-  // Returning the object
-  res.send({message: gameData});
+  // Consolidating the data created in a file for future use.
+  status = createNewGameFile(gameData);
+
+  // Returning the message
+  if(status != 'ERROR'){
+    res.send(gameData);
+    return 0;
+  }
+  else{
+    res.send({message: 'Error while trying to create new file for game'});
+    return 0;
+  }
+
+
+
 }
 
 module.exports = {

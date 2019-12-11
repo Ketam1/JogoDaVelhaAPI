@@ -4,8 +4,9 @@ function createId(){
   let gameJsonArray = reader.readAll();
   if(gameJsonArray != "ERROR"){
     let lastArrayElement = gameJsonArray.length - 1;
-    let newId = gameJsonArray[lastArrayElement].id + 1;
-    return JSON.stringify(gameJsonArray[0]);
+    let newId = gameJsonArray[lastArrayElement].game.gameId + 1;
+    console.log(newId);
+    return newId;
   }
   else{
     return "ERROR";

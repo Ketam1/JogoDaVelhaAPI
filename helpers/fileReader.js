@@ -1,32 +1,29 @@
 const fs = require('fs');
-const DATA_PATH = '../data';
+const DATA_PATH = 'data';
 
 function readAll(){
 
   let gameJsonArray = [];
+  let files = [];
 
   //Get all filenames in the directory
-
   try{
-    let files = fs.readdirSync(DATA_PATH);
-
+    files = fs.readdirSync(DATA_PATH);
   } catch(e){
-    console.log(e);
     return "ERROR"
   }
 
-
   //Recursively adds the content of files in to an array
-  for (i = 0; files.length < i; i++) {
-    fs.readFileSync(DATA_PATH + '/' + files[i], function (err, content) {
-      if(err)
-        return "ERROR"
-      else
-        gameJsonArray[i] = JSON.parse(content);
-    });
+  for (let i = 0; i < files.length; i++) {
+    try{
+      content = fs.readFileSync(DATA_PATH + '/' + files[i], 'UTF-8');
+      gameJsonArray.push(JSON.parse(content));
+    } catch(e){
+      return "ERROR"
+    }
   }
 
-  return files[0];
+  return gameJsonArray;
 }
 
 
@@ -42,13 +39,8 @@ function read(id){
 
   //Recursively search for certain ID in the files then return
   for (i = 0; files.length < i; i++) {
-    fs.readFileSync(DATA_PATH + files[i], function (err, content) {
-      gameJson = JSON.parse(content);
-      if(err)
-        return "ERROR"
-      if(gameJson.id = id)
-        return gameJson;
-    });
+    content = fs.readFileSync(DATA_PATH + '/' + files[i], 'UTF-8');
+    gameJsonArray[i] = JSON.parse(content);
   }
   return "ID was not found";
 }
