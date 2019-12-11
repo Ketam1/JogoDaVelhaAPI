@@ -1,0 +1,15 @@
+{
+  "game": {
+    "gameId": 1,
+    "firstPlayer": "X",
+    "gameState": "Finished",
+    "winner": "X",
+    "movements": [
+      {"movement": { "round": "1", "player": "X", "x": "0", "y": "0" }},
+      {"movement": { "round": "2", "player": "O", "x": "0", "y": "2" }},
+      {"movement": { "round": "3", "player": "X", "x": "1", "y": "1" }},
+      {"movement": { "round": "4", "player": "O", "x": "0", "y": "1" }},
+      {"movement": { "round": "5", "player": "X", "x": "2", "y": "2" }}
+    ]
+  }
+}
