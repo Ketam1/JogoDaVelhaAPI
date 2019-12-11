@@ -1,5 +1,7 @@
 const reader = require('./../helpers/fileReader.js');
 
+
+// Get last game id and increases it by 1, getting a new id
 function createId(){
   let gameJsonArray = reader.readAll();
   if(gameJsonArray != "ERROR"){

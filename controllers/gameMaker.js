@@ -10,7 +10,7 @@ function createGame(req, res){
   const gameId = createId();
 
   if(gameId == "ERROR"){
-    res.send({message: 'Error while trying to create game ID'});
+    res.send({msg: 'Error while trying to create game ID'});
     return 0;
   }
 
@@ -26,13 +26,13 @@ function createGame(req, res){
   // Consolidating the data created in a file for future use.
   status = createNewGameFile(gameData);
 
-  // Returning the message
+  // Returning the message.
   if(status != 'ERROR'){
     res.send(gameData);
     return 0;
   }
   else{
-    res.send({message: 'Error while trying to create new file for game'});
+    res.send({msg: 'Error while trying to create new file for game'});
     return 0;
   }
 

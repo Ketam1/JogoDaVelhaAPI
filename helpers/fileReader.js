@@ -1,6 +1,9 @@
 const fs = require('fs');
 const DATA_PATH = 'data';
 
+
+// Read all files and returns a array of all the content, with index being the
+// content of one file
 function readAll(){
 
   let gameJsonArray = [];
@@ -26,7 +29,7 @@ function readAll(){
   return gameJsonArray;
 }
 
-
+// Read a specific file and return it's contents
 function read(id){
   let gameJson;
 

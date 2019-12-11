@@ -1,4 +1,4 @@
-
+// Returns the choosen player
 function choosePlayer(){
   // Math.random gives a number between 0 and 1
   // If less than 0,5 returns TRUE, else returns FALSE
