@@ -7,7 +7,7 @@ fproduzido por Guilherme Sena para um processo seletivo para a empresa
 *Instruções de Build no final.*
 
 ## Imagens
-![Imgur](https://ibb.co/0qK67dn.gif)
+![Criando Jogo](images/video1.gif)
 Criando um novo jogo utilizando a API, a request foi feita atráves do aplicativo
 Postman que auxilia no processo da criação de uma aplicativo
 
