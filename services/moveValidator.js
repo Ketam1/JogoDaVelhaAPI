@@ -68,13 +68,12 @@ function checkRound(id, player){
   let last_round = gameJson.movements.length - 1;
 
   //If no move was made, checks to see if the move is from the first player
+  if(gameJson.movements.length == 0 && gameJson.firstPlayer == player)
+    return VALID;
   if(gameJson.movements.length == 0 && gameJson.firstPlayer != player)
     return WRONG_ROUND;
-  else{
-    if(gameJson.movements[last_round].movement.player == player)
-      return WRONG_ROUND;
-  }
-
+  if(gameJson.movements[last_round].movement.player == player)
+    return WRONG_ROUND;
 
 }
 

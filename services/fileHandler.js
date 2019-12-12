@@ -14,9 +14,17 @@ function createNewGameFile(data){
 function addMovementFile(data, status){
   let filename = 'game' + data.id + ".json";
   let gameJsonFile = reader.read(data.id);
+  let lastIndex;
+  let nextRound;
 
-  lastIndex = gameJsonFile.game.movements.length - 1;
-  nextRound = gameJsonFile.game.movements[lastIndex].movement.round + 1;
+  if(gameJsonFile.game.movements.length != 0){
+    lastIndex = gameJsonFile.game.movements.length - 1;
+    nextRound = gameJsonFile.game.movements[lastIndex].movement.round + 1;
+  }
+  else{
+    nextRound = 1;
+  }
+
 
   // Transform data to a movement JSON so it can be put in the file.
   let movement = {
