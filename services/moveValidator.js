@@ -38,7 +38,7 @@ function checkDiag(board, player){
 function checkPosition(id, x, y){
   let gameJson = reader.read(id).game;
   let gameMoves = gameJson.movements;
-  if(x < 0 && x > 2 && y < 0 && y > 2)
+  if(x < 0 || x > 2 || y < 0 || y > 2)
     return WRONG_POS;
   for(let i = 0; i < gameMoves.length; i++){
     if(gameMoves[i].movement.x == x && gameMoves[i].movement.y == y)
