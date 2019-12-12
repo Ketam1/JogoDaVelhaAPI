@@ -20,6 +20,8 @@ function createGame(req, res){
       gameId: gameId,
       firstPlayer: firstPlayer,
       gameState: 'Ongoing',
+      winner: '#',
+      movements: []
     }
   }
 
