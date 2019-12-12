@@ -32,20 +32,24 @@ function readAll(){
 // Read a specific file and return it's contents
 function read(id){
   let gameJson;
+  let files = [];
 
   //Get all file names in the directory
   try{
-    let files = fs.readdirSync(DATA_PATH);
+    files = fs.readdirSync(DATA_PATH);
   } catch(e){
     return "ERROR"
   }
 
   //Recursively search for certain ID in the files then return
-  for (i = 0; files.length < i; i++) {
+  for (let i = 0; i < files.length; i++) {
     content = fs.readFileSync(DATA_PATH + '/' + files[i], 'UTF-8');
-    gameJsonArray[i] = JSON.parse(content);
+    gameJson = JSON.parse(content);
+    if(gameJson.game.gameId == id){
+      return gameJson;
+    }
   }
-  return "ID was not found";
+  return "ID_NOT_FOUND";
 }
 
 
