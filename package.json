@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "node_modules/.bin/nodemon -e js",
-    "build": "npm install express && npm install body-parser"
+    "build": "npm install express && npm install body-parser && node ./index.js",
+    "basic": "node ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
