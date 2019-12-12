@@ -1,13 +1,13 @@
 # Jogo da velha API
 
-Esse programa consiste em uma API que gerencia jogos da velhas, foi produzida
-por Guilherme Sena para um processo seletivo para a empresa
+Esse programa consiste em uma API que gerencia jogos da velha (Tic-Tac-Toe),
+fproduzido por Guilherme Sena para um processo seletivo para a empresa
 [DTI](https://dtidigital.com.br/), utilizando a tecnologia NodeJS com Express.
 
 *Instruções de Build no final.*
 
 ## Imagens
-![Video starting a new game in the API](https://imgur.com/a/2PcpqwZ)
+![Imgur](https://ibb.co/0qK67dn.gif)
 Criando um novo jogo utilizando a API, a request foi feita atráves do aplicativo
 Postman que auxilia no processo da criação de uma aplicativo
 
