@@ -1,7 +1,7 @@
 # Jogo da velha API
 
 Esse programa consiste em uma API que gerencia jogos da velha (Tic-Tac-Toe),
-fproduzido por Guilherme Sena para um processo seletivo para a empresa
+produzido por Guilherme Sena para um processo seletivo para a empresa
 [DTI](https://dtidigital.com.br/), utilizando a tecnologia NodeJS com Express.
 
 *Instruções de Build no final.*
@@ -18,7 +18,7 @@ Instruções de Build
 ### Windows
 - Requisitos
   - NodeJS
-  - NPM (Ambos instaladores se encontram pra download [aqui](http://nodejs.org/download/)
+  - NPM (Ambos instaladores se encontram pra download [aqui](http://nodejs.org/download/))
 
 - Clona ou faça download do [repositório](https://github.com/Ketam1/JogoDaVelhaAPI)
 - Abra o terminal na pasta que foi clonada/baixada
@@ -27,7 +27,7 @@ Instruções de Build
 ### Ubuntu
 - Requisitos
   - NodeJS
-  - NPM (Tutorial para instalação de ambos [aqui](https://www.hostinger.com.br/tutoriais/instalar-node-js-ubuntu/)
+  - NPM (Tutorial para instalação de ambos [aqui](https://www.hostinger.com.br/tutoriais/instalar-node-js-ubuntu/))
 
 - Clona ou faça download do [repositório](https://github.com/Ketam1/JogoDaVelhaAPI)
 - Abra o terminal na pasta que foi clonada/baixada
